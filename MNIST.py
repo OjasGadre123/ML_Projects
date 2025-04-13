@@ -53,6 +53,9 @@ plt.ylabel('Loss')
 plt.title('Training Loss')
 plt.show()
 
+elapsed_time = end_time - start_time
+print(f'Training time: {elapsed_time:.2f} seconds')
+
 correct = 0
 total = 0
 
@@ -65,6 +68,6 @@ with torch.no_grad():
         total += y.size(0)
 
 accuracy = correct / total * 100
-print(f'Trained model in: {end_time - start_time} seconds\nWith an Validation Accuracy of: {accuracy:.2f}%')
+print(f'Validation Accuracy of: {accuracy:.2f}%')
 
 
